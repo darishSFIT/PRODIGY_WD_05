@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: background-image 0.5s ease-in-out;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .weather-info {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Buddy🌥️</h1>
+        <div class="search-box">
+            <input type="text" id="locationInput" placeholder="Enter location">
+            <button onclick="fetchWeatherByLocation()">Search</button>
+            <button onclick="fetchWeatherByCurrentLocation()">Current Location</button>
+        </div>
+        <div class="weather-info">
+            <h2 id="cityName"></h2>
+            <p id="description"></p>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
